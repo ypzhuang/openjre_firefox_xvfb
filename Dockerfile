@@ -9,6 +9,4 @@ ENV DISPLAY=:99 \
 
 RUN  apk --no-cache add dbus fontconfig ttf-freefont xvfb firefox-esr=$FF_VERSION
 
-ONBUILD RUN Xvfb :99  -screen 0 1920x1080x16 +extension RANDR &
-
 ENTRYPOINT Xvfb :99  -screen 0 1920x1080x16 +extension RANDR   
